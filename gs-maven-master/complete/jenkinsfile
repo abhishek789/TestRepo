@@ -7,7 +7,7 @@ maven  'Maven_3.5.2'
         stage('Compile stage') {
             steps {
                 
-                    bat "mvn clean compile"
+                    bat "cd gs-maven-master/complete/pom.xml && mvn clean compile"
             }
         }
     
@@ -15,7 +15,7 @@ maven  'Maven_3.5.2'
          stage('testing stage') {
              steps {
                  
-                    bat "mvn test"
+                    bat "cd gs-maven-master/complete/pom.xml && mvn test"
             }
         }
     
@@ -23,7 +23,7 @@ maven  'Maven_3.5.2'
           stage('deployment stage') {
               steps {
                   
-                    bat "mvn deploy"
+                    bat "cd gs-maven-master/complete/pom.xml && mvn deploy"
             }
         }
     
